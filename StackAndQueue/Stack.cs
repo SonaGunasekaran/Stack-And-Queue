@@ -21,5 +21,14 @@ namespace StackAndQueue
                 top = stack;
             }
         }
+        public void Peek()
+        {
+            if (top == null)
+            {
+                Console.WriteLine("No Elements");
+                return;
+            }
+            Console.WriteLine("The top element of the stack is" + " " + top.value);
+        }
     }
 }
