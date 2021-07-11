@@ -21,6 +21,17 @@ namespace StackAndQueue
                 top = stack;
             }
         }
+        public void Pop()
+        {
+            if (top == null)
+            {
+                Console.WriteLine("No element to pop");
+            }
+            else
+            {
+                top = top.Next;
+            }
+        }
         public void Peek()
         {
             if (top == null)
@@ -29,6 +40,22 @@ namespace StackAndQueue
                 return;
             }
             Console.WriteLine("The top element of the stack is" + " " + top.value);
+        }
+        public void Display()
+        {
+            if(top==null)
+            {
+                Console.WriteLine("Stack is empty!!");
+            }
+            else
+            {
+                Node<T> temp = top;
+                while(temp !=null)
+                {
+                    Console.WriteLine("" + temp.value);
+                    temp = temp.Next;
+                }
+            }
         }
     }
 }
