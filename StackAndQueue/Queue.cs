@@ -25,7 +25,21 @@ namespace StackAndQueue
                     rear.Next = queue;
                 }
             }
-        //Display elements in Queue
+            //Dequeue--->remove element from queue
+            public void Dequeue()
+            {
+               if (front == null)
+               {
+                  Console.WriteLine("No elements");
+               }
+               else
+               {
+                    Node<T> temp = front;
+                    front = front.Next;
+                    temp.Next = null;
+               }
+            }
+            //Display elements in Queue
             public void Display()
             {
                 if (front == null)
