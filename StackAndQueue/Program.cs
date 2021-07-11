@@ -15,6 +15,14 @@ namespace StackAndQueue
             stack.Peek();
             stack.Pop();
             stack.Display();
+
+            Queue<int> queue = new Queue<int>();
+            Console.WriteLine("Elements in Queue");
+            queue.Enqueue(56);
+            queue.Enqueue(30);
+            queue.Enqueue(70);
+            queue.Display();
+
         }
     }
 }
